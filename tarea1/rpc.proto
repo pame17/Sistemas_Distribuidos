@@ -3,24 +3,14 @@ syntax = "proto3";
 package item;
 
 service Item {
-
   rpc getDataDB (Value) returns (stream Respuesta) {}
-
+  rpc getDataCache (Value) returns (stream Respuesta) {}
 }
-
 
 message Value {
-  repeated string value = 1;
-}
-
-message dataItem{
-  string id = 1;
-  string name = 2;
-  string price = 3;
-  string category = 4;
-  string count = 5;
+  string value = 1;
 }
 
 message Respuesta{
-  repeated dataItem item = 1;
+  string items = 1;
 }
