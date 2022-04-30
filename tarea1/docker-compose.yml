@@ -1,18 +1,30 @@
 version: '3'
 
 services:
-  web:
-    container_name: api
+  server:
+    container_name: server
     restart: always
-    build: .
+    build: ./docker-server
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./docker-server:/usr/src/app
+      - ./node_modules:/usr/src/app/node_modules
+    depends_on:
+      - postgres
+  client:
+    container_name: client
+    restart: always
+    build: ./docker-client
     ports:
       - "8000:8000"
     volumes:
-      - .:/usr/src/app
+      - ./docker-client:/usr/src/app
+      - ./node_modules:/usr/src/app/node_modules
     depends_on:
-      - postgres
       - redis
   postgres:
+      container_name: postgres
       image: 'bitnami/postgresql:latest'
       restart: always
       environment:
@@ -24,10 +36,13 @@ services:
       volumes: 
         - ./data.sql:/docker-entrypoint-initdb.d/create_tables.sql
   redis:
+      container_name: redis
       image: 'bitnami/redis:latest'
       restart: always
       ports:
         - '6379:6379'
       environment:
         - ALLOW_EMPTY_PASSWORD=yes
+      volumes:
+        - ./redis.conf:/usr/local/etc/redis/redis.conf 
 

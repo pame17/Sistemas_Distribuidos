@@ -1,13 +1,14 @@
 {
-  "name": "tarea1",
+  "name": "docker-server",
   "version": "1.0.0",
-  "description": "Tarea 1 de Sistemas Distribuidos",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon server.js"
   },
-  "author": "Pamela Saldias",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "@grpc/grpc-js": "^1.6.3",

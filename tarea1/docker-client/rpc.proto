@@ -4,13 +4,20 @@ package item;
 
 service Item {
   rpc getDataDB (Value) returns (stream Respuesta) {}
-  rpc getDataCache (Value) returns (stream Respuesta) {}
 }
 
 message Value {
   string value = 1;
 }
 
+message Items{
+  string id = 1;
+  string name = 2;
+  string category = 3;
+  string price = 4;
+  string count = 5;
+}
+
 message Respuesta{
-  string items = 1;
+  repeated Items items = 1;
 }

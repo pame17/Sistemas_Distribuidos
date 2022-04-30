@@ -13,6 +13,6 @@ const packageDefinition = protoLoader.loadSync(
 
 const clientProto = grpc.loadPackageDefinition(packageDefinition).item;
 
-const client = new clientProto.Item('localhost:4500', grpc.credentials.createInsecure());
+const client = new clientProto.Item('server:8001', grpc.credentials.createInsecure());
 
 module.exports = client;
