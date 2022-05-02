@@ -1,6 +1,7 @@
-# Sistemas_Distribuidos
+# Sistemas Distribuidos
 
 Tarea 1 del curso de Sistemas Distribuidos.
+
 Pamela Saldías.
 
 Herramientas utilizadas:
@@ -9,13 +10,20 @@ Herramientas utilizadas:
 - Redis: se utilizó para el guardado de cache. Se utilizo la imagen https://hub.docker.com/r/bitnami/redis/. Las configuaciones se realizaron respecto a la documentación en https://redis.io/.
 
 Configuración Redis
-maxmemory 200mb (la memoria máxima que se utilizara en cache, en este caso se fijó respecto a 200mb)
-maxmemory-policy allkeys-lfu (el método de remoción cuando el cache se llena, que está dado por LRU)
 
-Instrucciones de inicialización
-git clone https://github.com/pame17/Sistemas_Distribuidos
-cd tarea1
-docker-compose up
+- maxmemory 200mb (la memoria máxima que se utilizara en cache, en este caso se fijó respecto a 200mb)
+
+- maxmemory-policy allkeys-lfu (el método de remoción cuando el cache se llena, que está dado por LRU)
+
+Instrucciones de inicialización:
+
+- git clone https://github.com/pame17/Sistemas_Distribuidos
+
+- cd tarea1
+
+- docker-compose up
+
+Comparación de algoritmos
 
 | LRU | LFU |
 | ------------- | ------------- |
