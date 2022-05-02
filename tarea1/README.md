@@ -33,4 +33,7 @@ Comparación de algoritmos
 
 En el contexto de la tarea, es más conveniente utilizar LFU. Ya que en las tiendas se quiere mantener en cache todos los productos que son los más vendidos a nivel histórico. Pero si por un tiempo estos productos se dejan de vender por un periodo de tiempo van a desaparecer del cache si se utiliza LRU. Por lo cual, al instante en que vuelvan a volverse populares, ya no estarán en el cache.
 
+Ejemplo de busqueda:
+
+curl --location --request GET 'http://localhost:8000/inventory/search?q=a'
 
