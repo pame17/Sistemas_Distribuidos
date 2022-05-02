@@ -18,9 +18,11 @@ cd tarea1
 docker-compose up
 
 | LRU | LFU |
+| ------------- | ------------- |
 | Menos utilizado recientemente | Menos utilizado |
-| Necesita identificar la posición de antigüedad de cada elemento en el cache | Necesita mantener la cantidad de veces que ha sido utilizado cada elemento en el cache |
+| Necesita identificar la posición de antigüedad de cada elemento en el cache | Necesita mantener la cantidad de veces que ha sido utilizado cada elemento en el cache|
 | Mantiene información relevante a corto plazo | Mantiene información relevante a largo plazo |
+
 En el contexto de la tarea, es más conveniente utilizar LFU. Ya que en las tiendas se quiere mantener en cache todos los productos que son los más vendidos a nivel histórico. Pero si por un tiempo estos productos se dejan de vender por un periodo de tiempo van a desaparecer del cache si se utiliza LRU. Por lo cual, al instante en que vuelvan a volverse populares, ya no estarán en el cache.
 
 
