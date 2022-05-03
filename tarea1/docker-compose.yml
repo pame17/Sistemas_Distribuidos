@@ -43,6 +43,6 @@ services:
         - '6379:6379'
       environment:
         - ALLOW_EMPTY_PASSWORD=yes
-      volumes:
-        - ./redis.conf:/usr/local/etc/redis/redis.conf 
+      command: /opt/bitnami/scripts/redis/run.sh --maxmemory 50mb --maxmemory-policy allkeys-lfu
+
 
