@@ -29,6 +29,7 @@ Ya que Kafka es una herramienta para la trasmision de datos, por lo que permitir
 Se tendrian que generar particiones del topico de modo de paralelizar el tema y generar grupos de consumers para consumir estas particiones.
 
 **Ejemplo de busqueda:**
+
 Para hacer uso de POST login se debe usar el siguiente CURL: curl -d "username=value1&password=value2" -X POST http://localhost:8000/login
 
 Para hacer uso de GET blocked se debe usar el siguiente CURL: curl --location --request GET 'http://localhost:8001/blocked'
