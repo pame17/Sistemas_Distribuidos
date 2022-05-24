@@ -6,6 +6,7 @@ Pamela Saldías.
 
 **Herramientas utilizadas:**
 - Node: para la creación del producer y consumer. Los paquetes usados fueron: nodemon, express,kafkajs y pg.
+- Kafka y zookeeper: para generar el flujo de transmision de datos. Se utilizo respecto a la imagen https://hub.docker.com/r/bitnami/kafka/ y https://hub.docker.com/_/zookeeper. 
 - Postgres: para guardar el historial de inicio de sesion en la base de datos. Se utilizo respecto a la imagen https://hub.docker.com/r/bitnami/postgresql/.
 - Docker y docker-compose: para simular la distribucion de cada elemento necesario para hacer la tarea. Esto esta dado por cinco contenedores: producer, consumer, zookeeper, kafka y base de datos.
 
