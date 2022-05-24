@@ -35,7 +35,7 @@ Para hacer uso de POST login se debe usar el siguiente CURL: curl -d "username=v
 
 Para hacer uso de GET blocked se debe usar el siguiente CURL: curl --location --request GET 'http://localhost:8001/blocked'
 
-Dentro del repositorio se encunetra dos casos de prueba de bloqueo.
+Dentro del repositorio se encuentra dos casos de prueba de bloqueo.
 1) En este caso se hace envio de 5 peticiones POST en tiempos instantaneos de modo de simular el bloqueo.
 ```
 bash run.sh
