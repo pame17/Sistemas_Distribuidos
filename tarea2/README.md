@@ -26,7 +26,7 @@ Ya que Kafka es una herramienta para la trasmision de datos, por lo que permitir
 
 2. Basado en las tecnologías que usted tiene a su disposición (Kafka, backend) ¿Qué haría usted para manejar una gran cantidad de usuarios al mismo tiempo? 
 
-Se tendrian que generar particiones del topico de modo de paralelizar el tema y generar grupos de consumers para consumir estas particiones.
+Se tendrian que generar particiones del topico de modo de paralelizar el tema y generar grupos de consumers para consumir estas particiones. De este modo se podria manejar mayor flujo de usuarios.
 
 **Ejemplo de busqueda:**
 
