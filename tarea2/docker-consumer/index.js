@@ -34,7 +34,7 @@ const run = async () => {
             });
             await db.connect()
             await db.query(`INSERT INTO historial(username, pass, fecha) VALUES ('`+username+`', '`+pass+`', '`+time+`')`);
-            var query = await db.query(`SELECT fecha FROM historial WHERE username = '`+username+`' and pass = '`+pass+`'`);
+            var query = await db.query(`SELECT fecha FROM historial WHERE username = '`+username+`'`);
             var data = query.rows;
             await db.end();
             count = 0;
