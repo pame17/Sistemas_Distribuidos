@@ -53,4 +53,5 @@ Dentro del repositorio se encuentra un archivo run.sh que se puede usar de prueb
 ```
 bash run.sh
 ```
+![Image text](https://github.com/pame17/Sistemas_Distribuidos/blob/main/tarea3/ejemplo.png)
 
