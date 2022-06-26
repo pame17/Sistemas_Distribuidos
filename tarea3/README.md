@@ -34,7 +34,7 @@ En este caso utilizaria SimpleStrategy dado la simplicidad del problema a resolv
 
 3. Teniendo en cuenta el contexto del problema ¿Usted cree que la solución propuesta es la correcta? ¿Qué ocurre cuando se quiere escalar en la solución? ¿Qué mejoras implementaría? Oriente su respuesta hacia el Sharding (la replicación/distribución de los datos) y comente una estrategia que podría seguir para ordenar los datos.
 
-Dado el contexto de la tarea en donde esta dado por un sistema de salud en donde pueden haber muchos pacientes cada uno con una cantidad de recetas, es esperable una gran cantidad de datos por lo que el uso de cassandra es adecuado y dado que las consultas son simples cassandra cumple bien con su cometido. Respecto a la escalabilidad se podria generar mayor numero de nodos dentro del cluster y replicaciones mas acorde a cada tabla. Dado que siempre existiran mas recetas que pacientes, se podrian generar mayor cantidad de replicas sobre las recetas que los pacientes.
+Dado el contexto de la tarea en donde esta dado por un sistema de salud en donde pueden haber muchos pacientes cada uno con una cantidad de recetas, es esperable una gran cantidad de datos por lo que el uso de cassandra es adecuado y dado que las consultas son simples cassandra cumple bien con su cometido. Respecto a la escalabilidad se podria generar mayor numero de nodos dentro del cluster y continuar con replicaciones mas acorde a cada tabla. Dado que siempre existiran mas recetas que pacientes, se podrian generar mayor cantidad de replicas sobre las recetas que los pacientes.
 
 **Ejemplo de busqueda:**
 

@@ -1,8 +1,10 @@
-create keyspace prueba with replication = {'class': 'NetworkTopologyStrategy', 'replication_factor': '3'};
+create keyspace pac with replication = {'class': 'SimpleStrategy', 'replication_factor': '2'};
+create keyspace rec with replication = {'class': 'SimpleStrategy', 'replication_factor': '3'};
 
-use prueba;
+use pac;
+use rec;
 
-CREATE TABLE prueba.paciente (
+CREATE TABLE pac.paciente (
   id UUID PRIMARY KEY,
   nombre text,
   apellido text,
@@ -11,7 +13,7 @@ CREATE TABLE prueba.paciente (
   fecha_nacimiento text
 );
 
-CREATE TABLE prueba.recetas (
+CREATE TABLE rec.recetas (
   id UUID PRIMARY KEY,
   id_paciente UUID,
   comentario text,
