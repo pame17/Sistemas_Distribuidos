@@ -14,6 +14,8 @@ Pamela Saldías.
 ```
 git clone https://github.com/pame17/Sistemas_Distribuidos
 
+cd Sistemas_Distribuidos
+
 cd tarea3
 
 docker-compose up
